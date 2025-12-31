@@ -1,0 +1,27 @@
+Station_ID,Station,Tourist Attraction,Count_Reviews,Rating,Last_Mile_Difficulty
+KJ10,KLCC ,Petronas Twin Towers,100519,4.7,1
+KJ10,KLCC ,Aquaria KLCC,38627,4.3,1
+KJ10,KLCC ,KLCC Park,61464,4.6,1
+KJ14,Pasar Seni ,Central Market,56814,4.3,1
+KJ14,Pasar Seni ,Chinatown (Petaling St),37072,4.1,1
+KJ14,Pasar Seni ,Kwai Chai Hong,3479,4.3,1
+KJ13,Masjid Jamek ,River of Life,1056,4.3,1
+KJ13,Masjid Jamek ,Sultan Abdul Samad Building,2474,4.6,1
+KJ13,Masjid Jamek ,Merdeka Square,50098,4.5,1
+KJ15,KL Sentral,Little India (Brickfields),13542,4.3,1
+KJ15,KL Sentral,Nu Sentral Mall,5091,4.4,1
+KJ15,KL Sentral,National Museum,13836,4.3,2
+KJ15,KL Sentral,Perdana Botanical Garden,26498,4.5,2
+KJ15,KL Sentral,KL Bird Park,15600,4.4,2
+KJ3,Wangsa Maju,Zoo Negara,22194,4.1,2
+KJ17,Abdullah Hukum,Mid Valley Megamall / The Gardens,41135,4.4,1
+KJ31,USJ 7,Sunway Lagoon Theme Park,28041,4.5,2
+KG18A,Bukit Bintang,Pavilion Mall,62377,4.6,1
+KG18A,Bukit Bintang,Jalan Alor (Food Street),10604,4.4,1
+KG18A,Bukit Bintang,Starhill,3086,4.3,1
+KG15,Muzium Negara,National Museum,13836,4.3,1
+KG17,Merdeka,Merdeka 118,1816,4.6,1
+KG20,Cochrane,MyTown / IKEA Cheras,28191,4.3,1
+KG22,Maluri,Sunway Velocity Mall,22655,4.3,1
+KG9,Bandar Utama,1 Utama Shopping Centre,35768,4.4,1
+KG34,Stadium Kajang,Sate Kajang (Famous local food),10859,3.9,1
