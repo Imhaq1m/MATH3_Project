@@ -305,3 +305,53 @@ else:
 
 plt.tight_layout()
 plt.show()
+
+comparison_df = pd.DataFrame(
+    {
+        "Station_ID": all_stations,
+        "Attractiveness_Score": [attractiveness_final.get(s, 0) for s in all_stations],
+        "Steady_State_Prob": steady_state_vector,
+    }
+).set_index("Station_ID")
+
+# Map IDs to Names for labels
+comparison_df["Station_Name"] = comparison_df.index.map(
+    lambda x: id_to_name.get(x, x))
+
+plt.figure(figsize=(12, 8))
+x = comparison_df["Attractiveness_Score"]
+y = comparison_df["Steady_State_Prob"]
+
+# Scatter Plot
+plt.scatter(
+    x, y, color="purple", alpha=0.7, s=100, edgecolors="black", label="Stations"
+)
+
+# Trend Line (Linear Regression)
+m, b = np.polyfit(x, y, 1)
+plt.plot(x, m * x + b, color="red", linestyle="--",
+         alpha=0.5, label="Trend Line")
+
+# Label key points (Top 5 Prob + Top 5 Attraction)
+top_prob = comparison_df.nlargest(14, "Steady_State_Prob").index
+top_attr = comparison_df.nlargest(14, "Attractiveness_Score").index
+labels_to_show = set(top_prob).union(set(top_attr))
+
+for station_id in labels_to_show:
+    row = comparison_df.loc[station_id]
+    plt.annotate(
+        row["Station_Name"],
+        (row["Attractiveness_Score"], row["Steady_State_Prob"]),
+        xytext=(5, 5),
+        textcoords="offset points",
+        fontsize=9,
+        bbox=dict(boxstyle="round,pad=0.3", fc="white", alpha=0.8),
+    )
+
+plt.title("Comparison: Intrinsic Attractiveness vs. Network Probability", fontsize=16)
+plt.xlabel("Attractiveness Score (1-10)", fontsize=12)
+plt.ylabel("Steady-State Probability (Calculated)", fontsize=12)
+plt.grid(True, linestyle="--", alpha=0.6)
+plt.legend()
+plt.tight_layout()
+plt.show()
